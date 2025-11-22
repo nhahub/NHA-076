@@ -42,43 +42,45 @@ The goal: accurately classify satellite imagery into one of the following classe
 
 ## Project Structure
 EuroSAT-Land-Classification/
+```text
+EuroSAT-Land-Classification/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
 │
-├── data/                          # NOT uploaded - download from Kaggle
-│   └── EuroSAT/                   # place dataset here
+├── data/                          # (NOT uploaded – download from Kaggle)
+│   └── EuroSAT/                   # place dataset here after download
 │
 ├── notebooks/                     # quick experiments & EDA
 │   └── 01_Land_Classification_EuroSAT.ipynb
 │
 ├── src/                           # clean, reusable code
-│   ├── init.py
-│   ├── config.py                  # hyperparameters & paths
-│   ├── dataset.py                 # Dataset class + transforms
+│   ├── __init__.py
+│   ├── config.py                  # all hyperparameters & paths
+│   ├── dataset.py                 # EuroSAT Dataset class + transforms
 │   ├── model.py                   # CustomCNN + ResNet variants
 │   ├── train.py                   # training + validation loop
-│   ├── evaluate.py                # confusion matrix + metrics
-│   ├── inference.py               # predict on new images
-│   └── utils.py                   # helpers & plotting
+│   ├── evaluate.py                # confusion matrix, metrics, plots
+│   ├── inference.py               # load model & predict on new images
+│   └── utils.py                   # helper functions
 │
-├── experiments/                   # one folder per experiment
+├── experiments/                   # one folder per run/experiment
 │   └── resnet18_98.44/
-│       ├── model_best.pth
+│       ├── model_best.pth         # best checkpoint
 │       ├── training_log.csv
 │       └── config.yaml
 │
-├── outputs/                       # auto-generated results
+├── outputs/                       # automatically generated results
 │   ├── confusion_matrix.png
 │   ├── metrics_summary.png
 │   ├── accuracy_loss_curve.png
 │   ├── classification_report.txt
 │   └── sample_predictions.jpg
 │
-└── images/                        # for README only (small size)
-├── confusion_matrix.png
-├── metrics_table.png
-└── thumbnail.jpg
+└── images/                        # lightweight images for README only
+    ├── confusion_matrix.png
+    ├── metrics_table.png
+    └── thumbnail.jpg
 
 ## How to Run
 1. **Download the dataset** from Kaggle:  
