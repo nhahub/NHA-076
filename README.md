@@ -46,39 +46,39 @@ EuroSAT-Land-Classification/
 ├── requirements.txt
 ├── .gitignore
 │
-├── data/                          # (NOT uploaded - download from Kaggle)
-│   └── EuroSAT/                   # place dataset here after download
+├── data/                          # NOT uploaded - download from Kaggle
+│   └── EuroSAT/                   # place dataset here
 │
 ├── notebooks/                     # quick experiments & EDA
 │   └── 01_Land_Classification_EuroSAT.ipynb
 │
 ├── src/                           # clean, reusable code
-│   ├── __init__.py
-│   ├── config.py                  # all hyperparameters & paths
-│   ├── dataset.py                 # EuroSAT Dataset class + transforms
+│   ├── init.py
+│   ├── config.py                  # hyperparameters & paths
+│   ├── dataset.py                 # Dataset class + transforms
 │   ├── model.py                   # CustomCNN + ResNet variants
 │   ├── train.py                   # training + validation loop
-│   ├── evaluate.py                # confusion matrix, metrics, plots
-│   ├── inference.py               # load model & predict on new images
-│   └── utils.py                   # helper functions
+│   ├── evaluate.py                # confusion matrix + metrics
+│   ├── inference.py               # predict on new images
+│   └── utils.py                   # helpers & plotting
 │
-├── experiments/                   # one folder per run/experiment
+├── experiments/                   # one folder per experiment
 │   └── resnet18_98.44/
-│       ├── model_best.pth         # best checkpoint
+│       ├── model_best.pth
 │       ├── training_log.csv
 │       └── config.yaml
 │
-├── outputs/                       # automatically generated results
+├── outputs/                       # auto-generated results
 │   ├── confusion_matrix.png
 │   ├── metrics_summary.png
 │   ├── accuracy_loss_curve.png
 │   ├── classification_report.txt
 │   └── sample_predictions.jpg
 │
-└── images/                        # lightweight images for README only
-    ├── confusion_matrix.png
-    ├── metrics_table.png
-    └── thumbnail.jpg
+└── images/                        # for README only (small size)
+├── confusion_matrix.png
+├── metrics_table.png
+└── thumbnail.jpg
 
 ## How to Run
 1. **Download the dataset** from Kaggle:  
