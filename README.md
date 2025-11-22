@@ -41,3 +41,23 @@ The goal: accurately classify satellite imagery into one of the following classe
 - Training Time: ~12–18 minutes on Kaggle GPU / Colab (50 epochs)
 
 ## Project Structure
+├── data/                   # (not uploaded - download from Kaggle)
+├── images/                 ← confusion matrix & result screenshots
+├── notebooks/
+│   └── Land_Type_Classification_EuroSAT.ipynb
+├── src/
+│   ├── model.py            ← Model definition (CustomCNN & ResNet variants)
+│   ├── train.py            ← Training loop
+│   ├── utils.py            ← Data loading & visualization helpers
+│   └── inference.py        ← Load model & predict on new images
+├── requirements.txt
+
+
+## How to Run
+1. **Download the dataset** from Kaggle:  
+   https://www.kaggle.com/datasets/mohamedelnahry/land-type-classification-using-eurosatsentinel-2
+2. **Place it** in `/data/EuroSAT/` or update the path in the notebook.
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   python src/train.py
