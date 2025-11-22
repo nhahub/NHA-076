@@ -1,0 +1,26 @@
+# Use official Python image
+FROM python:3.10-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements and install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the Flask app script
+COPY testing_best_model.py .
+
+# Optionally copy the model file directly, or instruct user to mount it
+# COPY best_model.pth ./  # Uncomment if you want model in image at build time
+
+# Flask runs on port 5000 by default
+EXPOSE 5000
+
+# Set environment variables for Flask
+ENV FLASK_APP=testing_best_model.py
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_ENV=production
+
+# CMD to start Flask app
+CMD ["flask", "run"]
