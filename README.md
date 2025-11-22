@@ -81,7 +81,7 @@ EuroSAT-Land-Classification/
     ├── confusion_matrix.png
     ├── metrics_table.png
     └── thumbnail.jpg
-
+```
 ## How to Run
 1. **Download the dataset** from Kaggle:  
    https://www.kaggle.com/datasets/mohamedelnahry/land-type-classification-using-eurosatsentinel-2
