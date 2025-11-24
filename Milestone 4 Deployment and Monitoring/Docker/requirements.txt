@@ -1,0 +1,6 @@
+torch
+torchvision
+Pillow
+# matplotlib  # Only needed for plotting in notebooks/scripts, not Flask app
+numpy
+Flask
