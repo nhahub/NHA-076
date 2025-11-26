@@ -1,5 +1,6 @@
 # Land Type Classification using EuroSAT  
 **Sentinel-2 Satellite Imagery | 10-Class Land Use / Land Cover Classification**
+🛰️ 98.44% accurate Land Use/Land Cover classification on EuroSAT dataset using Sentinel-2 imagery (PyTorch + ResNet)
 
 [![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/mohamedelnahry/land-type-classification-eurosat)  
 [![Dataset](https://img.shields.io/badge/Dataset-EuroSAT-blue?style=for-the-badge)](https://www.kaggle.com/datasets/mohamedelnahry/land-type-classification-using-eurosatsentinel-2)  
@@ -90,3 +91,12 @@ EuroSAT-Land-Classification/
    ```bash
    pip install -r requirements.txt
    python src/train.py
+
+### 🚀 Quick Start
+```bash
+git clone https://github.com/yourname/EuroSAT-Land-Classification.git
+cd EuroSAT-Land-Classification
+pip install -r requirements.txt
+python src/train.py
+
+   
